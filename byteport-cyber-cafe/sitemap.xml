@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://byteport.example/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://byteport.example/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-arena-240hz.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-console-corner.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-details.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-exam-form-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-freelance-day-pass.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-print-resume.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-spot-phishing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-symmetric-fiber.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog-video-interview-pod.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/blog.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/index-2.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/rates.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-browsing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-details.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-forms.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-gaming.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-lamination.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-pods.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-scan.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-tickets.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/service-typing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://byteport.example/services.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

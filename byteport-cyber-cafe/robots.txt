@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /coming-soon.html
+
+Sitemap: https://byteport.example/sitemap.xml

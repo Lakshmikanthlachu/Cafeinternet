@@ -1,0 +1,16 @@
+{
+  "name": "byteport-cyber-cafe-template",
+  "version": "1.0.0",
+  "description": "Byteport — Cyber Cafe & Internet Center HTML template (Tailwind CSS, dark/light, RTL)",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/style.css --minify",
+    "watch": "tailwindcss -i ./assets/css/tailwind.input.css -o ./assets/css/style.css --watch",
+    "localize-images": "node tools/localize-images.mjs",
+    "build:public": "node tools/build-public.mjs",
+    "vercel-build": "npm run build && npm run build:public"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "license": "SEE LICENSE IN documentation.html"
+}
