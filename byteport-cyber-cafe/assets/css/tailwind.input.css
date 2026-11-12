@@ -147,8 +147,10 @@
   /* glitch headline on hover */
   .glitch { position: relative; display: inline-block; }
   .glitch::before, .glitch::after { content: attr(data-text); position: absolute; inset: 0; opacity: 0; pointer-events: none; }
-  .glitch:hover::before { opacity: .8; color: #ff3ea5; animation: gl1 .45s steps(2) infinite; }
-  .glitch:hover::after { opacity: .8; color: #2ee6d6; animation: gl2 .45s steps(2) infinite; }
+  @media (hover: hover) and (pointer: fine) {
+    .glitch:hover::before { opacity: .8; color: #ff3ea5; animation: gl1 .45s steps(2) 2; }
+    .glitch:hover::after { opacity: .8; color: #2ee6d6; animation: gl2 .45s steps(2) 2; }
+  }
 
   /* image frame that reveals like a monitor powering on */
   .crt { @apply relative overflow-hidden rounded-2xl bg-ink-950; }

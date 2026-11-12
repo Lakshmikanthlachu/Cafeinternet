@@ -198,6 +198,40 @@
      The section is made exactly tall enough that scrolling it moves the track from its
      first card to its last; then the sticky element releases and the page carries on. */
   const pins = $$('[data-pin]').map(sec => ({ sec, sticky: $('[data-pin-sticky]', sec), track: $('[data-pin-track]', sec), num: $('[data-pin-num]', sec), bar: $('[data-pin-bar]', sec), dist: 0, x: 0 }));
+  // the track glides towards its target instead of jumping with every wheel tick
+  const glide = p => {
+    if (p.anim) return;
+    const step = () => {
+      const d = p.target - p.x;
+      p.x = Math.abs(d) < .4 ? p.target : p.x + d * (reduce ? 1 : .16);
+      p.track.style.transform = `translate3d(${p.x.toFixed(2)}px,0,0)`;
+      p.anim = p.x !== p.target ? requestAnimationFrame(step) : 0;
+    };
+    p.anim = requestAnimationFrame(step);
+  };
+  const pinTop = p => p.sec.getBoundingClientRect().top + scrollY - 72;
+  const goTo = y => lenis ? lenis.scrollTo(y, { duration: 1 }) : window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+  pins.forEach(p => {
+    const n = p.track.children.length;
+    // previous / next buttons: jump one card left or right
+    $$('[data-pin-go]', p.sec).forEach(b => b.addEventListener('click', () => {
+      if (!p.dist) { p.track.parentElement.scrollBy({ left: (+b.dataset.pinGo) * p.track.children[0].offsetWidth, behavior: 'smooth' }); return; }
+      const cur = Math.round(Math.min(1, Math.max(0, (scrollY - pinTop(p)) / p.dist)) * (n - 1));
+      const nx = Math.min(n - 1, Math.max(0, cur + (+b.dataset.pinGo)));
+      goTo(pinTop(p) + (nx / (n - 1)) * p.dist + 1);
+    }));
+    // sideways trackpad / shift+wheel moves the tour too
+    p.sec.addEventListener('wheel', e => {
+      if (!p.dist) return;
+      const dx = e.shiftKey && !e.deltaX ? e.deltaY : e.deltaX;
+      if (Math.abs(dx) <= Math.abs(e.deltaY) && !e.shiftKey) return;
+      const top = pinTop(p), y = Math.min(top + p.dist, Math.max(top, scrollY + dx));
+      e.preventDefault(); lenis ? lenis.scrollTo(y, { immediate: false, lerp: .12 }) : window.scrollTo(0, y);
+    }, { passive: false });
+    // arrow keys while the tour is on screen
+    p.sec.tabIndex = -1;
+    p.sec.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); $(`[data-pin-go="${e.key === 'ArrowRight' ? 1 : -1}"]`, p.sec)?.click(); } });
+  });
   const sizePins = () => {
     pins.forEach(p => {
       p.dist = window.innerHeight <= 520 ? 0 : Math.max(0, p.track.scrollWidth - window.innerWidth);
@@ -232,7 +266,7 @@
       const r = p.sec.getBoundingClientRect(), total = p.sec.offsetHeight - p.sticky.offsetHeight;
       if (!p.dist) { p.track.style.transform = ''; return; }
       const prog = total > 0 ? Math.min(1, Math.max(0, (72 - r.top) / total)) : 0;
-      p.track.style.transform = `translate3d(${(-prog * p.dist).toFixed(1)}px,0,0)`;
+      p.target = -prog * p.dist; glide(p);
       const n = p.track.children.length;
       if (p.num) p.num.textContent = String(Math.min(n, 1 + Math.round(prog * (n - 1)))).padStart(2, '0');
       if (p.bar) p.bar.style.width = (prog * 100).toFixed(1) + '%';

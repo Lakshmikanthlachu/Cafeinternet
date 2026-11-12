@@ -24,12 +24,12 @@
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/chakra-petch-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=1.1.0">
+<link rel="stylesheet" href="assets/css/style.css?v=1.2.0">
 
 </head>
 <body class="min-h-screen">
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-[90] focus:rounded-lg focus:bg-signal-400 focus:px-4 focus:py-2 focus:text-ink-950">Skip to content</a>
-<aside class="relative z-[60] bg-ink-950 text-ink-200" aria-label="Live café status"><div class="container-x flex h-9 items-center justify-between gap-4 font-mono text-[11px] sm:text-xs"><p class="flex items-center gap-2 truncate"><span class="relative flex h-2 w-2 shrink-0"><span class="absolute inline-flex h-full w-full animate-ping2 rounded-full bg-lime-400"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-lime-400"></span></span><span dir="auto"><b class="text-lime-300" data-free-count>18</b>/40 stations free<span class="hidden sm:inline"> · fiber 1 Gbps · Wi-Fi password at the counter</span></span></p><div class="hidden items-center gap-5 md:flex"><span class="flex items-center gap-1.5"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Open daily · 8:00 AM – 2:00 AM</span><a href="tel:+15550142290" class="flex items-center gap-1.5 hover:text-signal-300"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span dir="ltr">+1 (555) 014-2290</span></a></div></div></aside>
+
 <header class="sticky top-0 z-50" data-header>
   <div class="relative border-b border-ink-900/10 bg-white transition-shadow dark:border-white/10 dark:bg-ink-950" data-header-bar>
     <div class="container-x flex h-[72px] items-center gap-3">
@@ -59,7 +59,7 @@
   <div class="container-x flex min-h-[640px] flex-col items-center justify-center py-20 text-center lg:min-h-[calc(100svh-108px)]">
     <p class="eyebrow eyebrow-light !text-pulse-300" data-reveal="up">Byteport Arena · eSports lounge</p>
     <h1 id="hero-title" class="mt-6 font-display text-[3rem] font-bold uppercase leading-[.92] sm:text-7xl lg:text-[7.5rem]" data-reveal="zoom">
-      <span class="block">Frag</span><span class="block text-grad">Stream</span><span class="glitch block" data-text="Repeat">Repeat</span></h1>
+      <span class="block">Frag</span><span class="block text-grad">Stream</span><span class="block">Repeat</span></h1>
     <p class="mx-auto mt-6 max-w-xl text-ink-200 sm:text-lg" data-reveal="up" style="--d:120ms">32 tournament-grade rigs, a VR bay, console corner and a streaming booth — book by the hour or join the Friday ladder.</p>
     <div class="mt-8 flex flex-wrap justify-center gap-3" data-reveal="up" style="--d:200ms"><a href="contact.html#book" class="btn-pink" data-magnetic><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-3.95 3.4L2 14.5A2.8 2.8 0 0 0 7 16.4l1.5-1.4h7l1.5 1.4a2.8 2.8 0 0 0 5-1.9l-.75-6.1A4 4 0 0 0 17.3 5z"/></svg>Book a rig</a><a href="#ladder" class="btn-ghost-light">Tournament ladder</a></div>
     <div class="glass mt-12 inline-flex flex-wrap items-center justify-center gap-4 rounded-2xl px-6 py-4 font-mono text-xs sm:gap-6" data-reveal="up" style="--d:280ms" data-countdown="2026-11-20T20:00:00">
@@ -73,10 +73,10 @@
   <div class="container-x grid items-center gap-12 lg:grid-cols-2">
     <div>
       <p class="eyebrow eyebrow-light !text-pulse-300" data-reveal="up">Gear check</p>
-      <h2 id="kb-title" class="mt-3 text-3xl sm:text-4xl lg:text-5xl" data-reveal="up">Hot-swap mechanical keys — <span class="text-grad">go on, try them</span></h2>
-      <p class="mt-4 text-ink-300" data-reveal="up">Hover the board or type on your own keyboard — every rig ships with per-key RGB, 8K polling mice and noise-cancelling headsets.</p>
-      <ul class="mt-8 grid grid-cols-2 gap-4 text-sm" data-reveal="up">
-        <li class="glass flex items-center gap-3 rounded-xl p-4"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>RTX 4070 Ti</li><li class="glass flex items-center gap-3 rounded-xl p-4"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>27″ 240 Hz</li><li class="glass flex items-center gap-3 rounded-xl p-4"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>7.1 headsets</li><li class="glass flex items-center gap-3 rounded-xl p-4"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 20 0"/><path d="M12 20h.01"/></svg>4 ms ping</li>
+      <h2 id="kb-title" class="mt-3 text-2xl sm:text-3xl lg:text-4xl" data-reveal="up">Mechanical keys — <span class="text-grad">try them</span></h2>
+      <p class="mt-3 text-sm text-ink-300 sm:text-base" data-reveal="up">Hover the board or type on your keyboard.</p>
+      <ul class="mt-6 grid grid-cols-2 gap-3 text-sm" data-reveal="up">
+        <li class="glass flex items-center gap-3 rounded-xl px-4 py-3"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>RTX 4070 Ti</li><li class="glass flex items-center gap-3 rounded-xl px-4 py-3"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>27″ 240 Hz</li><li class="glass flex items-center gap-3 rounded-xl px-4 py-3"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>7.1 headsets</li><li class="glass flex items-center gap-3 rounded-xl px-4 py-3"><svg class="h-5 w-5 text-pulse-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 20 0"/><path d="M12 20h.01"/></svg>4 ms ping</li>
       </ul>
     </div>
     <div class="glass rounded-3xl p-4 sm:p-8" data-reveal="zoom" data-keyboard>
@@ -90,7 +90,8 @@
     <div class="container-x flex flex-wrap items-end justify-between gap-4 ">
       <div class="max-w-2xl"><p class="eyebrow" data-reveal="up">Five zones</p><h2 id="zone-title" class="h-section" data-reveal="up" style="--d:80ms">Scroll through the arena</h2></div>
       <div class="flex items-center gap-4 font-mono text-xs text-ink-500 dark:text-ink-400"><span><b class="text-ink-950 dark:text-white" data-pin-num>01</b> / 05</span>
-        <span class="relative h-1 w-28 overflow-hidden rounded-full bg-ink-900/10 dark:bg-white/10"><span class="absolute inset-y-0 start-0 w-0 rounded-full bg-gradient-to-r from-signal-400 to-pulse-400" data-pin-bar></span></span></div>
+        <span class="relative h-1 w-20 overflow-hidden rounded-full bg-ink-900/10 dark:bg-white/10 sm:w-28"><span class="absolute inset-y-0 start-0 w-0 rounded-full bg-gradient-to-r from-signal-400 to-pulse-400" data-pin-bar></span></span>
+        <span class="flex gap-2"><button type="button" class="btn-icon !h-10 !w-10 " data-pin-go="-1" aria-label="Previous photo"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button type="button" class="btn-icon !h-10 !w-10 " data-pin-go="1" aria-label="Next photo"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></span></div>
     </div>
     <div class="mt-5 flex w-max gap-5 px-4 will-change-transform sm:mt-8 sm:gap-6 sm:px-6 lg:px-[max(2rem,calc((100vw-80rem)/2+2rem))]" data-pin-track dir="ltr"><article class="group relative flex h-[min(46svh,480px)] sm:h-[min(56svh,480px)] w-[80vw] sm:w-[440px] lg:w-[560px] shrink-0 flex-col justify-end overflow-hidden rounded-3xl bg-ink-950 p-6 text-white sm:p-8">
   <img src="https://images.unsplash.com/photo-1566304211221-a25fe7aacbe2?fm=webp&q=72&w=1120&fit=crop" srcset="https://images.unsplash.com/photo-1566304211221-a25fe7aacbe2?fm=webp&q=72&w=640&fit=crop 640w, https://images.unsplash.com/photo-1566304211221-a25fe7aacbe2?fm=webp&q=72&w=1120&fit=crop 1120w, https://images.unsplash.com/photo-1566304211221-a25fe7aacbe2?fm=webp&q=72&w=1600&fit=crop 1600w" sizes="(min-width:1024px) 560px, 80vw" alt="Row of high-end gaming PCs" class="absolute inset-0 h-full w-full object-cover transition-[scale] duration-700 group-hover:scale-105" loading="lazy" decoding="async" width="1120" height="700" >
@@ -194,7 +195,7 @@
   <span class="sr-only">Back to top</span><span class="hidden sm:inline" aria-hidden="true">SESSION</span><span data-session-time aria-hidden="true">00:00:00</span><span class="hidden text-pulse-300 sm:inline" data-session-cost aria-hidden="true">$0.00</span>
   <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
 </button>
-<script src="assets/js/vendor/lenis.min.js?v=1.1.0" defer></script>
-<script src="assets/js/main.js?v=1.1.0" defer></script>
+<script src="assets/js/vendor/lenis.min.js?v=1.2.0" defer></script>
+<script src="assets/js/main.js?v=1.2.0" defer></script>
 </body>
 </html>
